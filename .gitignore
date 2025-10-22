@@ -4,6 +4,8 @@
 .idea/
 *.code-workspace
 
+# 项目文档（根据需要调整）
+/readme.md
 
 # 忽略所有可执行文件
 *.exe
