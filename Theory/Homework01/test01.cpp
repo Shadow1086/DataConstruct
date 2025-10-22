@@ -23,20 +23,20 @@ int main() {
       break;
     }
   }
-//   cout << "index= " << index << endl;
+  //   cout << "index= " << index << endl;
   if ((index == -1) && num >= A[elenum - 1]) {
     index = elenum;
     A[index] = num;
-  }else{
+  } else {
     A[elenum] = 0;
     for (int i = elenum; i >= index; i--) {
-        int temp = A[i - 1];
-        A[i - 1] = A[i];
-        A[i] = temp;
+      int temp = A[i - 1];
+      A[i - 1] = A[i];
+      A[i] = temp;
     }
   }
-  cout<<"插入后的数列："<<endl;
-  for(int i = 0;i<=elenum;i++){
+  cout << "插入后的数列：" << endl;
+  for (int i = 0; i <= elenum; i++) {
     cout << A[i] << "\t";
   }
   getchar();

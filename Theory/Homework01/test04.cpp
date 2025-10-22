@@ -9,53 +9,53 @@ using namespace std;
 #define MAXSIZE 100
 typedef char Element;
 
-typedef struct{
-    Element * elem;
-    int length;
-}SqList;
+typedef struct {
+  Element *elem;
+  int length;
+} SqList;
 
-void sort(SqList &L){
-    //left是字母区，right是其他字符
-    int i = 0,left = -1,right = L.length;
-    for(i;i<right;i++){
-        //是数字
-        if(L.elem[i]>='0'&&L.elem[i]<='9'){
-        } else if (L.elem[i] >= 'a' && L.elem[i] <= 'z' ||
-                   L.elem[i] >= 'A' && L.elem[i] <= 'Z') {
-        //是字母
-                    left++;
-                   Element temp = L.elem[left];
-                   L.elem[left] = L.elem[i];
-                   L.elem[i] = temp;
-        } else {
-        //是其他字符
-          --right;
-          Element temp = L.elem[right];
-          L.elem[right] = L.elem[i];
-          L.elem[i] = temp;
-          i--;
-        }
+void sort(SqList &L) {
+  // left是字母区，right是其他字符
+  int i = 0, left = -1, right = L.length;
+  for (i; i < right; i++) {
+    // 是数字
+    if (L.elem[i] >= '0' && L.elem[i] <= '9') {
+    } else if (L.elem[i] >= 'a' && L.elem[i] <= 'z' ||
+               L.elem[i] >= 'A' && L.elem[i] <= 'Z') {
+      // 是字母
+      left++;
+      Element temp = L.elem[left];
+      L.elem[left] = L.elem[i];
+      L.elem[i] = temp;
+    } else {
+      // 是其他字符
+      --right;
+      Element temp = L.elem[right];
+      L.elem[right] = L.elem[i];
+      L.elem[i] = temp;
+      i--;
     }
+  }
 }
 
 int main() {
-    SqList L;
-    L.elem = new char[MAXSIZE];
-    L.length =0;
-    char R[] = {'3', 'a', '#', 'b', '5', '@', 'c', '1', 'Z'};
-    int n = 9;
-    for(int i = 0;i<n;i++){
-        L.elem[i] = R[i];
-    }
-    L.length =n;
+  SqList L;
+  L.elem = new char[MAXSIZE];
+  L.length = 0;
+  char R[] = {'3', 'a', '#', 'b', '5', '@', 'c', '1', 'Z'};
+  int n = 9;
+  for (int i = 0; i < n; i++) {
+    L.elem[i] = R[i];
+  }
+  L.length = n;
 
-    sort(L);
+  sort(L);
 
-    cout << "排序后：" << endl;
-    for(int i = 0;i<L.length;i++){
-        cout << L.elem[i] << "\t";
-    }
+  cout << "排序后：" << endl;
+  for (int i = 0; i < L.length; i++) {
+    cout << L.elem[i] << "\t";
+  }
 
-    cin.get();
-    return 0;
+  cin.get();
+  return 0;
 }
