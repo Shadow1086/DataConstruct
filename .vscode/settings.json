@@ -1,11 +1,13 @@
 {
+  // C/C++ 编译器配置（macOS）
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
-  "C_Cpp_Runner.debuggerPath": "gdb",
-  "C_Cpp_Runner.cStandard": "",
-  "C_Cpp_Runner.cppStandard": "",
-  "C_Cpp_Runner.msvcBatchPath": "C:/Program Files/Microsoft Visual Studio/VR_NR/Community/VC/Auxiliary/Build/vcvarsall.bat",
+  "C_Cpp_Runner.debuggerPath": "lldb",
+  "C_Cpp_Runner.cStandard": "c11",
+  "C_Cpp_Runner.cppStandard": "c++11",
   "C_Cpp_Runner.useMsvc": false,
+  
+  // 编译警告设置
   "C_Cpp_Runner.warnings": [
     "-Wall",
     "-Wextra",
@@ -17,26 +19,14 @@
     "-Wsign-conversion",
     "-Wnull-dereference"
   ],
-  "C_Cpp_Runner.msvcWarnings": [
-    "/W4",
-    "/permissive-",
-    "/w14242",
-    "/w14287",
-    "/w14296",
-    "/w14311",
-    "/w14826",
-    "/w44062",
-    "/w44242",
-    "/w14905",
-    "/w14906",
-    "/w14263",
-    "/w44265",
-    "/w14928"
-  ],
   "C_Cpp_Runner.enableWarnings": true,
   "C_Cpp_Runner.warningsAsError": false,
+  
+  // 编译和链接参数
   "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.linkerArgs": [],
+  
+  // 包含路径配置
   "C_Cpp_Runner.includePaths": [],
   "C_Cpp_Runner.includeSearch": [
     "*",
@@ -50,10 +40,36 @@
     "**/.vscode",
     "**/.vscode/**"
   ],
+  
+  // 调试和优化选项
   "C_Cpp_Runner.useAddressSanitizer": false,
   "C_Cpp_Runner.useUndefinedSanitizer": false,
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
+  
+  // C/C++ IntelliSense 配置
+  "C_Cpp.default.cppStandard": "c++11",
+  "C_Cpp.default.cStandard": "c11",
+  "C_Cpp.default.intelliSenseMode": "macos-clang-arm64",
+  
+  // 编辑器通用设置
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": false,
+  "editor.rulers": [80, 120],
+  
+  // 文件设置
+  "files.encoding": "utf8",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.exclude": {
+    "**/*.exe": true,
+    "**/*.o": true,
+    "**/*.out": true,
+    "**/.DS_Store": true
+  },
+  
+  // 终端设置
+  "terminal.integrated.defaultProfile.osx": "zsh"
 }
