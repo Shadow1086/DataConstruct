@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "调试当前 C++ 文件",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "启用格式化打印",
+                    "text": "settings set target.process.follow-fork-mode child",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build Current File"
+        }
+    ]
+}
