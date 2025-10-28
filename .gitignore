@@ -1,6 +1,5 @@
 # IDE 和编辑器配置
 /.vs
-/.vscode
 .idea/
 *.code-workspace
 
