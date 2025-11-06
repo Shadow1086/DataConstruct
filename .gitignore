@@ -9,6 +9,14 @@
 # 忽略所有可执行文件
 *.exe
 *.out
+# 忽略无扩展名的可执行文件（在特定目录）
+**/experiment*/test[0-9]*
+!**/experiment*/*.cpp
+**/Class*/[0-9]*
+!**/Class*/*.cpp
+**/Homework*/test[0-9]*
+!**/Homework*/*.cpp
+!**/Homework*/*.txt
 
 # 忽略 C++ 编译产物
 *.obj
