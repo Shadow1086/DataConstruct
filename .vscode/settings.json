@@ -64,10 +64,22 @@
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
   "files.exclude": {
+    // 编译产物和系统文件（原有配置）
     "**/*.exe": true,
     "**/*.o": true,
     "**/*.out": true,
-    "**/.DS_Store": true
+    "**/.DS_Store": true,
+    // 新增隐藏规则
+    "**/*.class": true,        // 所有 .class 文件（Java 编译产物）
+    "**/bin/**": true,         // bin/ 目录
+    "**/LICENSE": true,        // LICENSE 文件
+    "**/README.md": true,      // README.md 文件
+    "**/*.dSYM/**": true,      // 以 .dSYM 结尾的目录（macOS 调试符号目录）
+    "**/*.txt": true,          // 所有 .txt 文件
+    "**/test[0-9]": true,      // test 后跟单个数字（如 test1）
+    "**/test[0-9][0-9]": true, // test 后跟两位数字（如 test01）
+    "**/test[0-9][0-9][0-9]": true, // test 后跟三位数字（如 test001）
+    "**/[0-9][0-9]": true      // 两位数字文件名（如 02）
   },
   
   // 终端设置

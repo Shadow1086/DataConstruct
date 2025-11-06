@@ -2,7 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "调试当前 C++ 文件",
+            "name": "调试当前 C++ 文件 (CodeLLDB)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${fileDirname}",
+            "stopOnEntry": false,
+            "preLaunchTask": "Build Current File"
+        },
+        {
+            "name": "调试当前 C++ 文件 (cppdbg)",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
